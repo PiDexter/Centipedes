@@ -102,10 +102,6 @@ boolean noMoreFruitLeft() {
   return totalCherries == 0 && totalBananas == 0;
 }
 
-void setLastCellVisited(int x, int y) {
-  grid[x][y] = VISITED_CELL;
-}
-
 
 
 

@@ -7,7 +7,7 @@ void updatePosition(int x, int y) {
     playerPosition[i] = playerPosition[i - 1];
   }
 
-  setLastCellVisited(lastPosition[0], lastPosition[1]);
+  setCellValue(lastPosition[0], lastPosition[1], VISITED_CELL);
 
   // Set index 0 to new x and y position of player
   playerPosition[0] = nextPosition;
