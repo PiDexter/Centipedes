@@ -5,7 +5,7 @@ void setRandomElement(int total, int element) {
     int x = int(random(cols));
     int y = int(random(rows));
     
-    if (cellValueIs(x, y, EMPTY_CELL) && !isPlayer(x, y)) {
+    if (cellValue(EMPTY_CELL, x, y) && !isPlayer(x, y)) {
       grid[x][y] = element;
     } else {
       continue;
