@@ -20,15 +20,6 @@ void play() {
 
 
 
-void drawMessage(String text) {
-  fill(#FFFFFF);
-  textSize(51);
-  textAlign(CENTER, CENTER);
-  text(text, width / 2, height / 1.1);
-}
-
-
-
 /*
 * KEYBOARD CONTROLS
 */
