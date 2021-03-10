@@ -13,23 +13,6 @@ void drawGridCell(int x, int y) {
   rect(xGridMargin() + (cellSize() * x), yGridMargin() + (y * cellSize()), cellSize(), cellSize());
 }
 
-
-
-void drawFruit() {
-
-  switch (grid[getHeadX()][getHeadY()]) {
-
-  case CHERRY:
-    drawShape(cherry);
-    break;
-
-  case BANANA:
-    drawShape(banana);
-    break;
-  }
-  
-}
-
 void drawShape(PShape type) {
   shape(type, xCoordinateCell(getHeadX()), yCoordinateCell(getHeadY()), cellSize(), cellSize());
 }
