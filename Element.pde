@@ -22,11 +22,11 @@ void drawElements() {
   switch (grid[getHeadX()][getHeadY()]) {
 
   case CHERRY:
-    drawShape(cherry);
+    drawCellShape(cherry);
     break;
 
   case BANANA:
-    drawShape(banana);
+    drawCellShape(banana);
     break;
   }
   
