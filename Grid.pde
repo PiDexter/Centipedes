@@ -37,7 +37,7 @@ void drawGameBoard() {
       drawPlayer(x, y);
 
       if (playerOnFruit(x, y)) {
-        drawFruit();
+        drawElements();
       }
       
       if (debugMode) {
