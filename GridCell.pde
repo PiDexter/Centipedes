@@ -13,7 +13,7 @@ void drawGridCell(int x, int y) {
   rect(xGridMargin() + (cellSize() * x), yGridMargin() + (y * cellSize()), cellSize(), cellSize());
 }
 
-void drawShape(PShape type) {
+void drawCellShape(PShape type) {
   shape(type, xCoordinateCell(getHeadX()), yCoordinateCell(getHeadY()), cellSize(), cellSize());
 }
 
