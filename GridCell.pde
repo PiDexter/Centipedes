@@ -73,12 +73,8 @@ float yCoordinateCell(int y) {
 }
 
 
-boolean cellValueIs(int x, int y, int value) {
+boolean cellValue(int value, int x, int y) {
   return grid[x][y] == value;
-}
-
-boolean cellIsEmpty(int x, int y) {
-  return grid[x][y] == EMPTY_CELL;
 }
 
 boolean isPlayer(int x, int y) {
