@@ -50,23 +50,6 @@ int totalChameleons() {
   return (int) Math.ceil(numberOfChameleons);
 }
 
-//int totalCellCount() {
-//  return getRows() * getCols();
-//}
-
-//int countCellElements(int cellType) {
-//  int total = 0;
-
-//  for (int x = 0; x < grid.length; x++) {
-//    for (int y = 0; y < grid[1].length; y++) {
-//      if (grid[x][y] == cellType) {
-//        total += 1;
-//      }
-//    }
-//  }
-//  return total;
-//}
-
 
 float cellSize() {
   return (width * CELLSIZE) / 100;
