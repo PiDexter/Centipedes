@@ -15,6 +15,25 @@ void setRandomElement(int total, int element) {
   } while (elementsCreated < total);
 }
 
+
+
+void drawElements() {
+
+  switch (grid[getHeadX()][getHeadY()]) {
+
+  case CHERRY:
+    drawShape(cherry);
+    break;
+
+  case BANANA:
+    drawShape(banana);
+    break;
+  }
+  
+}
+
+
+
 void handleGameElements(int x, int y) {
   switch (grid[x][y]) { // grid cell value
 
