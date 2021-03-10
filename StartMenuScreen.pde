@@ -45,15 +45,15 @@ void drawMenu() {
 
   // Row 1
   drawRowTitle("PLAYER MODE", rowHeight + rowMargin * rowTitleButtonPos[0][0] - titleMargin);
-  drawPlayerMode(rowHeight + rowMargin * rowTitleButtonPos[0][1], buttonSize / 1.5, buttonSize / 1.5);
+  drawPlayerMode(rowHeight + rowMargin * rowTitleButtonPos[0][1], buttonSize / 1.5);
 
   // Row 2
   drawRowTitle("BANANA DIFFICULTY", rowHeight + rowMargin * rowTitleButtonPos[1][0] - titleMargin);
-  drawBananaOptions(bananaOptions, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize, buttonSize);
+  drawBananaOptions(bananaOptions, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize);
 
   // Row 3
   drawRowTitle("BOARD SIZE", rowHeight + rowMargin * rowTitleButtonPos[2][0] - titleMargin);
-  drawGridOptions(gridOptions, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize, buttonSize);
+  drawGridOptions(gridOptions, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize);
 
   // Row 4
   drawFullWidthButton("PLAY GAME", xPos, rowHeight + rowMargin * rowTitleButtonPos[3][0], buttonSize);

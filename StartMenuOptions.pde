@@ -1,9 +1,9 @@
 /*
 *  PLAYER MODE
 */
-void drawPlayerMode(float y, float squareWidth, float squareHeight) {
-  shape(arrowLeft, width / 2 + squareWidth, y, squareWidth, squareHeight);
-  shape(arrowRight, width / 2 + squareWidth * 2.8, y, squareWidth, squareHeight);
+void drawPlayerMode(float y, float buttonSize) {
+  shape(arrowLeft, width / 2 + buttonSize, y, buttonSize, buttonSize);
+  shape(arrowRight, width / 2 + buttonSize * 2.8, y, buttonSize, buttonSize);
 }
 
 
@@ -11,9 +11,9 @@ void drawPlayerMode(float y, float squareWidth, float squareHeight) {
 /*
 *  BANANA OPTIONS
 */
-void drawBananaOptions(int[] options, float y, float squareWidth, float squareHeight) {
+void drawBananaOptions(int[] options, float y, float buttonSize) {
   
-  float xCenter = calculateButtonsCenterX(options.length, squareWidth);
+  float xCenter = calculateButtonsCenterX(options.length, buttonSize);
 
   for (int i = 0; i < options.length; i++) {
     
@@ -25,11 +25,11 @@ void drawBananaOptions(int[] options, float y, float squareWidth, float squareHe
       buttonType = selectButton;
     }
     
-    shape(buttonType, xCenter + (buttonSize * i), y, squareWidth, squareHeight);
+    shape(buttonType, xCenter + (buttonSize * i), y, buttonSize, buttonSize);
     
 
     String text = Integer.toString(options[i]);
-    drawButtonText(text, xCenter + (squareWidth * i) + (squareWidth / 2), yCenterText(y, squareHeight), WHITE);
+    drawButtonText(text, xCenter + (buttonSize * i) + (buttonSize / 2), yCenterText(y, buttonSize), WHITE);
     
   }
 }
@@ -51,9 +51,8 @@ int getBananaValue(int[] options, float x, float y, float buttonWidth, float but
 /*
 *  GRID SIZE OPTIONS
 */
-void drawGridOptions(int[][] options, float y, float squareWidth, float squareHeight) {
+void drawGridOptions(int[][] options, float y, float buttonSize) {
 
-  float buttonSize = (width / 2) / options.length;
   float xCenter = calculateButtonsCenterX(options.length, buttonSize);
 
   for (int i = 0; i < options.length; i++) {
