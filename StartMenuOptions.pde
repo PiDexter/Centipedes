@@ -11,15 +11,14 @@ void drawPlayerMode(float y, float buttonSize) {
 /*
 *  BANANA OPTIONS
 */
-void drawBananaOptions(int[] options, float y, float buttonSize) {
+void drawBananaOptions(int[][] options, float y, float buttonSize) {
   
   float xCenter = calculateButtonsCenterX(options.length, buttonSize);
 
   for (int i = 0; i < options.length; i++) {
     
     PShape buttonType;
-    
-    if (bananaSelected == options[i]) {
+    if (bananaSelected == i) {
       buttonType = buttonSelected;
     } else {
       buttonType = selectButton;
@@ -28,16 +27,17 @@ void drawBananaOptions(int[] options, float y, float buttonSize) {
     shape(buttonType, xCenter + (buttonSize * i), y, buttonSize, buttonSize);
     
 
-    String text = Integer.toString(options[i]);
+    String text = Integer.toString(options[i][0]);
     drawButtonText(text, xCenter + (buttonSize * i) + (buttonSize / 2), yCenterText(y, buttonSize), WHITE);
     
   }
 }
 
-int getBananaValue(int[] options, float x, float y, float buttonWidth, float buttonHeight) {
+int[] getBananaValue(int[][] options, float x, float y, float buttonWidth, float buttonHeight) {
   for (int i = 0; i < options.length; i++) {
     
     if (overObject(x + i * buttonWidth, y, buttonWidth, buttonHeight)) {
+      bananaSelected = i;
       return options[i];
     }
     

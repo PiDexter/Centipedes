@@ -3,7 +3,7 @@ int rows = 8;
 
 int[][] grid;
 
-int totalBananas;
+int totalBananas = 4;
 int totalCherries;
 
 void initGrid() {

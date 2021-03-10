@@ -75,9 +75,8 @@ void drawRowTitle(String text, float y) {
 */
 void startMenuMouseControl() {
   if (overButton(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize, buttonSize)) {
-    int waarde = getBananaValue(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize, buttonSize);
-    bananaSelected = waarde;
-    setBananas(waarde);
+    int[] waarde = getBananaValue(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize, buttonSize);
+    setBananas(waarde[0]);
   }
 
   if (overButton(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize, buttonSize)) {  

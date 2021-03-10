@@ -22,4 +22,12 @@ int[][] gridOptions = {
   {32, 16}
 };
 
-int[] bananaOptions = {4, 8, 12, 16, 20};
+int[][] bananaOptions = {
+  {4},
+  {8},
+  {12},
+  {16},
+  {20}
+};
+
+//int[] bananaOptions = {4, 8, 12, 16, 20};
