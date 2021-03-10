@@ -56,25 +56,7 @@ void drawEmptyGrid(int x, int y) {
   drawGridCell(x, y);
 }
 
-int cellColor(int x, int y) {
 
-  int cellColor = #FFFFFF;
-
-  if (debugMode) {
-    if (grid[x][y] == BANANA) {
-      cellColor = YELLOW;
-    } else if (grid[x][y] == CHERRY) {
-      cellColor = RED;
-    } else if (grid[x][y] == CHAMELEON) {
-      cellColor = PURPLE;
-    } else {
-      cellColor = WHITE;
-    }
-  }
-  
-  return cellColor;
-  
-}
 
 void setBananas(int bananas) {
   totalBananas = bananas;
