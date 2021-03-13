@@ -33,6 +33,7 @@ int[][] bananaOptions = {
 * TEXT SIZES
 */
 int largeText;
+int mediumText;
 
 void loadConfig() {
   initTextSizes();
@@ -40,4 +41,5 @@ void loadConfig() {
 
 void initTextSizes() {
   largeText = (height * 5) / 100;
+  mediumText = (height * 3) / 100;
 }
