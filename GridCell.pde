@@ -38,20 +38,6 @@ int cellColor(int x, int y) {
 }
 
 
-int totalChameleons() {
-
-  int totalEmptyCells = elementCount(EMPTY_CELL) - playerElements;
-  int numberOfChameleons = totalEmptyCells * 10 / 100;
-  
-  // If smaller then 10 player will never lose, so minimum is 10.
-  if (numberOfChameleons < 10) {
-   numberOfChameleons = 10; 
-  }
-
-  return (int) Math.ceil(numberOfChameleons);
-}
-
-
 float cellSize() {
   return (width * CELLSIZE) / 100;
 }
