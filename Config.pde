@@ -9,8 +9,6 @@ final int YELLOW = #FFFF00;
 final int RED = #FF0000;
 final int PURPLE = #660066;
 
-
-
 /*
 * GAME SETTINGS
 */
@@ -30,4 +28,16 @@ int[][] bananaOptions = {
   {20}
 };
 
-//int[] bananaOptions = {4, 8, 12, 16, 20};
+
+/*
+* TEXT SIZES
+*/
+int largeText;
+
+void loadConfig() {
+  initTextSizes();
+}
+
+void initTextSizes() {
+  largeText = (height * 5) / 100;
+}

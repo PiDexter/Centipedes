@@ -5,6 +5,7 @@ void setup() {
   surface.setTitle("Centipede by Christiaan Wiggers");
   loadAssets();
   
+  loadConfig();
 }
 
 void draw() {
