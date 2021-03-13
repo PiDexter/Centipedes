@@ -38,11 +38,6 @@ void drawGameState() {
   case GAME_OVER:
     endScreen();
     break;
-
-  default:
-    //error
-    println ("unknown state line 64");
-    exit();
-    break;
+    
   }
 }

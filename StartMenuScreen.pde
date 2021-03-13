@@ -11,9 +11,9 @@ float[][] rowTitleButtonPos = {
   {2.7}, // Play button
 };
 
-// Default (-1) is none selected
-int bananaSelected = -1;
-int gridSelected = -1;
+
+int bananaSelected;
+int gridSelected;
 
 boolean menuInitialized = false;
 
@@ -23,6 +23,10 @@ void initMenu() {
   rowHeight = height * 0.1574;
   xPos = width / 4;
   titleMargin = 30;
+
+  // Default (-1) is none selected
+  bananaSelected = -1;
+  gridSelected = -1;
 }
 
 void menu() {
@@ -70,7 +74,7 @@ void drawRowTitle(String text, float y) {
 
 /*
 * MOUSE CONTROLS
-*/
+ */
 void startMenuMouseControl() {
   if (overButton(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize)) {
     int[] waarde = getBananaValue(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize);
@@ -84,10 +88,14 @@ void startMenuMouseControl() {
   }
 
   if (overObject(xPos, rowHeight + rowMargin * rowTitleButtonPos[3][0], width / 2, buttonSize)) {
-    if (bananaSelected == -1) {
-      return;
+    if (gameOptionsAreSet()) {
+      setGameState(PLAY_GAME);
     } else {
-    setGameState(PLAY_GAME);
+      return;
     }
   }
+}
+
+boolean gameOptionsAreSet() {
+  return bananaSelected != -1 && gridSelected != -1;
 }

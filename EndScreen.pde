@@ -28,7 +28,7 @@ void restart() {
 *  KEYBOARD CONTROLS
 */
 void gameOverControls() {
-  if (key == 'r') {
+  if (key == 'r' || key == 'R') {
     restart();
   }
   loop();
