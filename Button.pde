@@ -6,8 +6,6 @@ void drawFullWidthButton(String buttonText, float x, float y, float buttonSize) 
   float textSize = buttonSize / 2;
 
   shape(playButton, x, y, buttonFullWidth, buttonSize);
-  fill(WHITE);
-  rect(x, y, buttonFullWidth, buttonSize);
   drawButtonText(buttonText, buttonFullWidth, yCenterText(y, buttonSize), textSize);
 }
 
