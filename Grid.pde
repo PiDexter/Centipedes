@@ -3,18 +3,8 @@ int rows = 8;
 
 int[][] grid;
 
-int totalBananas = 4;
-int totalCherries;
-
 void initGrid() {
-
   createEmptyGrid(cols, rows);
-
-  totalCherries = totalBananas / 2;
-  
-  setRandomElement(totalCherries, CHERRY);
-  setRandomElement(totalBananas, BANANA);
-  setRandomElement(totalChameleons(), CHAMELEON);
 }
 
 int[][] createEmptyGrid(int cols, int rows) {
@@ -34,21 +24,6 @@ void drawEmptyGrid(int x, int y) {
   drawGridCell(x, y);
 }
 
-void setBananas(int bananas) {
-  totalBananas = bananas;
-}
-
-
-
-float xGridMargin() {
-  return (width - (cols * cellSize())) / 2;
-}
-
-float yGridMargin() {
-  return (height - (rows * cellSize())) / 2;
-}
-
-
 int getRows() {
   return rows;
 }
@@ -63,4 +38,12 @@ void setRows(int rows) {
 
 void setCols(int cols) {
   this.cols = cols;
+}
+
+float xGridMargin() {
+  return (width - (cols * cellSize())) / 2;
+}
+
+float yGridMargin() {
+  return (height - (rows * cellSize())) / 2;
 }

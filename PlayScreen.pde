@@ -1,42 +1,16 @@
-boolean gameInitialized = false;
-
 void play() {
   background(0);
-  
-  if (gameInitialized == false) {
-    
-    initPlayer();  
-    initGrid(); 
 
-    gameInitialized = true;
+  if (!gameInitialized) {
+    
+    initGame();  
     
   } else {
-
+    
     drawScore();
-    drawGameBoard();
+    drawGame();
     noLoop();
-  }
-}
-
-void drawGameBoard() {
-  for (int x = 0; x < getCols(); x++) {
-    for (int y = 0; y < getRows(); y++) {
-
-      drawEmptyGrid(x, y);
-      drawPlayer(x, y);
-
-      if (playerOnFruit(x, y)) {
-        drawElements();
-      }
-      
-      if (debugMode) {
-       fill(51);
-       textAlign(CENTER, CENTER);
-       textSize(12);
-       text(x + "," + y, xCoordinateCell(x) + cellSize() / 2, yCoordinateCell(y) + cellSize() / 2); 
-      }
-      
-    }
+    
   }
 }
 
@@ -44,7 +18,7 @@ void drawGameBoard() {
 
 /*
 * KEYBOARD CONTROLS
-*/
+ */
 void gamePlayControls() {
   if (keyCode==UP || key == 'w') {
     move(getHeadX(), getHeadY() - 1);
@@ -55,7 +29,7 @@ void gamePlayControls() {
   } else if (keyCode==RIGHT || key =='d') {
     move(getHeadX() + 1, getHeadY());
   }
-  
+
   // DEBUG MODE
   if (keyCode==TAB) {
     debugMode = !debugMode;
