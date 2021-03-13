@@ -18,6 +18,28 @@ void play() {
   }
 }
 
+void drawGameBoard() {
+  for (int x = 0; x < getCols(); x++) {
+    for (int y = 0; y < getRows(); y++) {
+
+      drawEmptyGrid(x, y);
+      drawPlayer(x, y);
+
+      if (playerOnFruit(x, y)) {
+        drawElements();
+      }
+      
+      if (debugMode) {
+       fill(51);
+       textAlign(CENTER, CENTER);
+       textSize(12);
+       text(x + "," + y, xCoordinateCell(x) + cellSize() / 2, yCoordinateCell(y) + cellSize() / 2); 
+      }
+      
+    }
+  }
+}
+
 
 
 /*

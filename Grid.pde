@@ -29,34 +29,10 @@ int[][] createEmptyGrid(int cols, int rows) {
   return grid;
 }
 
-void drawGameBoard() {
-  for (int x = 0; x < cols; x++) {
-    for (int y = 0; y < rows; y++) {
-
-      drawEmptyGrid(x, y);
-      drawPlayer(x, y);
-
-      if (playerOnFruit(x, y)) {
-        drawElements();
-      }
-      
-      if (debugMode) {
-       fill(51);
-       textAlign(CENTER, CENTER);
-       textSize(12);
-       text(x + "," + y, xCoordinateCell(x) + cellSize() / 2, yCoordinateCell(y) + cellSize() / 2); 
-      }
-      
-    }
-  }
-}
-
 void drawEmptyGrid(int x, int y) { 
   fill(cellColor(x, y));
   drawGridCell(x, y);
 }
-
-
 
 void setBananas(int bananas) {
   totalBananas = bananas;
