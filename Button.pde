@@ -6,6 +6,8 @@ void drawFullWidthButton(String buttonText, float x, float y, float buttonSize) 
   float textSize = buttonSize / 2;
 
   shape(playButton, x, y, buttonFullWidth, buttonSize);
+  fill(WHITE);
+  rect(x, y, buttonFullWidth, buttonSize);
   drawButtonText(buttonText, buttonFullWidth, yCenterText(y, buttonSize), textSize);
 }
 
@@ -34,9 +36,9 @@ void drawButtonText(String text, float x, float y, int textColor) {
 /*
 * BUTTON EVENT OBSERVER
  */
-boolean overButton(int[] options, float x, float y, float buttonWidth, float height) {
+boolean overButton(int[] options, float x, float y, float buttonSize) {
   for (int i = 0; i < options.length; i++) {
-    if (overObject(x + i * buttonWidth, y, buttonWidth, height)) {
+    if (overObject(x + i * buttonSize, y, buttonSize)) {
       return true;
     }
   }
@@ -44,17 +46,23 @@ boolean overButton(int[] options, float x, float y, float buttonWidth, float hei
 }
 
 // Overloading for 2D array
-boolean overButton(int[][] options, float x, float y, float buttonWidth, float height) {
+boolean overButton(int[][] options, float x, float y, float buttonSize) {
   for (int i = 0; i < options.length; i++) {
-    if (overObject(x + i * buttonWidth, y, buttonWidth, height)) {
+    if (overObject(x + i * buttonSize, y, buttonSize)) {
       return true;
     }
   }
   return false;
 }
 
-boolean overObject(float x, float y, float buttonWidth, float buttonHeight) {
-  return mouseX >= x && mouseX < x + buttonWidth && mouseY >= y && mouseY < y + buttonHeight;
+
+boolean overObject(float x, float y, float buttonSize) {
+  return mouseX >= x && mouseX < x + buttonSize && mouseY >= y && mouseY < y + buttonSize;
+}
+
+// Overloading for custom height parameter
+boolean overObject(float x, float y, float buttonSize, float height) {
+  return mouseX >= x && mouseX < x + buttonSize && mouseY >= y && mouseY < y + height;
 }
 
 
