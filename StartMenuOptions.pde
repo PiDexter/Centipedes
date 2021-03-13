@@ -33,10 +33,10 @@ void drawBananaOptions(int[][] options, float y, float buttonSize) {
   }
 }
 
-int[] getBananaValue(int[][] options, float x, float y, float buttonWidth, float buttonHeight) {
+int[] getBananaValue(int[][] options, float x, float y, float buttonWidth) {
   for (int i = 0; i < options.length; i++) {
     
-    if (overObject(x + i * buttonWidth, y, buttonWidth, buttonHeight)) {
+    if (overObject(x + i * buttonWidth, y, buttonSize)) {
       bananaSelected = i;
       return options[i];
     }
@@ -73,11 +73,11 @@ void drawGridOptions(int[][] options, float y, float buttonSize) {
   }
 }
 
-int[] getGridValue(int[][] options, float x, float y, float buttonWidth, float buttonHeight) {
+int[] getGridValue(int[][] options, float x, float y, float buttonSize) {
   
   for (int i = 0; i < options.length; i++) {
     
-    if (overObject(x + i * buttonWidth, y, buttonWidth, buttonHeight)) {     
+    if (overObject(x + i * buttonSize, y, buttonSize)) {     
       gridSelected = i;
       return options[i];
     }

@@ -74,13 +74,13 @@ void drawRowTitle(String text, float y) {
 * MOUSE CONTROLS
 */
 void startMenuMouseControl() {
-  if (overButton(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize, buttonSize)) {
-    int[] waarde = getBananaValue(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize, buttonSize);
+  if (overButton(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize)) {
+    int[] waarde = getBananaValue(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize);
     setBananas(waarde[0]);
   }
 
-  if (overButton(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize, buttonSize)) {  
-    int[] waarde = getGridValue(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize, buttonSize);
+  if (overButton(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize)) {  
+    int[] waarde = getGridValue(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize);
     cols = waarde[0];
     rows = waarde[1];
   }
