@@ -32,7 +32,7 @@ void initMenu() {
 
 void menu() {
   bgMenu.resize(width, height);
-  background(bgMenu);// Resets the previous graphics
+  background(bgMenu);
   if (menuInitialized == false) {
 
     initMenu();  

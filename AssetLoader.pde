@@ -11,7 +11,11 @@ PShape arrowRight;
 PShape cherry;
 PShape banana;
 
+/*
+* IMAGES
+*/
 PImage bgMenu;
+PImage bgPlay;
 
 /*
 * FONTS
@@ -21,6 +25,7 @@ PFont squirk; // custom font
 
 void loadAssets() {
   createShapes();
+  createImages();
   createFonts();
 }
 
@@ -35,7 +40,12 @@ void createShapes() {
   cherry = loadShape("assets/shapes/cherry.svg");
   banana = loadShape("assets/shapes/banana.svg");
 
+  
+}
+
+void createImages() {
   bgMenu = loadImage("assets/shapes/bg.jpg");
+  bgPlay = loadImage("assets/images/bgPlay.jpg");
 }
 
 
@@ -48,4 +58,5 @@ void createFonts() {
 * ILLUSTRATION CREDITS
 * <a href="https://www.freepik.com/vectors/frame">Frame vector created by upklyak - www.freepik.com</a>
 * <a href="https://www.freepik.com/vectors/cartoon">Cartoon vector created by brgfx - www.freepik.com</a>
+* <a href="https://www.freepik.com/vectors/background">Background vector created by brgfx - www.freepik.com</a>
 */
