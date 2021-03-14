@@ -30,7 +30,6 @@ void createStartPosition() {
 }
 
 
-
 void drawPlayer(int x, int y) {
   
   for (int i = 0; i < playerPosition.length; i++) {
@@ -50,15 +49,15 @@ void drawPlayer(int x, int y) {
       fill(LIGHT_GRAY);
       drawGridCell(x, y);
       break;
-    }
-    
+    } 
   }
-  
 }
+
 
 boolean isHead(int x, int y) {
   return x == getHeadX() && y == getHeadY();
 }
+
 
 boolean isTail(int x, int y) {
   // Tail starts at index 1
@@ -80,12 +79,10 @@ void updatePlayer(int x, int y) {
     gameOver();
   }
 
-  if (!canMove()) {
+  if (!hasNextMoves()) {
     gameOver();
   }
 }
-
-
 
 
 void removeTailElement() {
@@ -98,18 +95,18 @@ void removeTailElement() {
   }
 }
 
+
 boolean noMoreFruitLeft() {
   return totalCherries == 0 && totalBananas == 0;
 }
 
 
-
-
 boolean playerOnFruit(int x, int y) {
   return isHead(x, y) && 
-    getCellValue(x, y) == CHERRY || 
-    getCellValue(x, y) == BANANA;
+         getCellValue(x, y) == CHERRY || 
+         getCellValue(x, y) == BANANA;
 }
+
 
 int getPlayerElements() {
   return playerElements;
@@ -120,13 +117,16 @@ int getHeadX() {
   return playerPosition[0][0];
 }
 
+
 int getHeadY() {
   return playerPosition[0][1];
 }
 
+
 int getLastTailPositionX() {
   return playerPosition[playerElements - 1][0];
 }
+
 
 int getLastTailPositionY() {
   return playerPosition[playerElements - 1][1];

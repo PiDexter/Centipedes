@@ -11,14 +11,17 @@ final int SETTINGS = 4;
 int gameState = START_MENU;
 boolean debugMode = false;
 
+
 int getGameState() {
   return gameState;
 }
+
 
 void setGameState(int state) {
   gameState = state;
   clear();
 }
+
 
 void drawGameState() {
   switch(gameState) {
@@ -38,11 +41,6 @@ void drawGameState() {
   case GAME_OVER:
     endScreen();
     break;
-
-  default:
-    //error
-    println ("unknown state line 64");
-    exit();
-    break;
+    
   }
 }

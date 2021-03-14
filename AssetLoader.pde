@@ -24,6 +24,7 @@ void loadAssets() {
   createFonts();
 }
 
+
 void createShapes() {
   selectButton = loadShape("assets/shapes/button.svg");
   buttonSelected = loadShape("assets/shapes/buttonSelected.svg");
@@ -34,8 +35,8 @@ void createShapes() {
   cherry = loadShape("assets/shapes/cherry.svg");
   banana = loadShape("assets/shapes/banana.svg");
   
-  scoreBackground = loadShape("assets/shapes/scoreBackground.svg");
 }
+
 
 void createFonts() {
   squirk = createFont("assets/fonts/Squirk.ttf", 32);

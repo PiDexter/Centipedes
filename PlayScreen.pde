@@ -1,28 +1,23 @@
-boolean gameInitialized = false;
-
 void play() {
   background(0);
-  
-  if (gameInitialized == false) {
-    
-    initPlayer();  
-    initGrid(); 
 
-    gameInitialized = true;
+  if (!gameInitialized) {
+    
+    initGame();  
     
   } else {
-
+    
     drawScore();
-    drawGameBoard();
+    drawGame();
     noLoop();
+    
   }
 }
 
 
-
 /*
 * KEYBOARD CONTROLS
-*/
+ */
 void gamePlayControls() {
   if (keyCode==UP || key == 'w') {
     move(getHeadX(), getHeadY() - 1);
@@ -33,7 +28,7 @@ void gamePlayControls() {
   } else if (keyCode==RIGHT || key =='d') {
     move(getHeadX() + 1, getHeadY());
   }
-  
+
   // DEBUG MODE
   if (keyCode==TAB) {
     debugMode = !debugMode;

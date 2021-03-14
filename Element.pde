@@ -5,7 +5,7 @@ void setRandomElement(int total, int element) {
     int x = int(random(cols));
     int y = int(random(rows));
     
-    if (cellValue(EMPTY_CELL, x, y) && !isPlayer(x, y)) {
+    if (cellValueIs(EMPTY_CELL, x, y) && !isPlayer(x, y)) {
       grid[x][y] = element;
     } else {
       continue;
@@ -14,7 +14,6 @@ void setRandomElement(int total, int element) {
     elementsCreated += 1;
   } while (elementsCreated < total);
 }
-
 
 
 void drawElements() {
@@ -31,7 +30,6 @@ void drawElements() {
   }
   
 }
-
 
 
 void handleGameElements(int x, int y) {
@@ -52,7 +50,6 @@ void handleGameElements(int x, int y) {
     break;
   }
 }
-
 
 
 int elementCount(int cellType) {

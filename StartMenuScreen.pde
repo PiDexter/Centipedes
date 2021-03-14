@@ -16,16 +16,19 @@ int gridSelected;
 
 boolean menuInitialized = false;
 
+
 void initMenu() {
   buttonSize = (width / 2) / MAX_BUTTONS_ROW;
   rowMargin = height * 0.22;
   rowHeight = height * 0.1574;
   xPos = width / 4;
   titleMargin = 30;
-  
-  bananaSelected = 0;
-  gridSelected = 0;
+
+  // Default (-1) is none selected
+  bananaSelected = -1;
+  gridSelected = -1;
 }
+
 
 void menu() {
   //background(0);// Resets the previous graphics
@@ -40,6 +43,7 @@ void menu() {
     noLoop();
   }
 }
+
 
 void drawMenu() {
 
@@ -72,7 +76,7 @@ void drawRowTitle(String text, float y) {
 
 /*
 * MOUSE CONTROLS
-*/
+ */
 void startMenuMouseControl() {
   if (overButton(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize)) {
     int[] waarde = getBananaValue(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize);
@@ -81,11 +85,20 @@ void startMenuMouseControl() {
 
   if (overButton(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize)) {  
     int[] waarde = getGridValue(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize);
-    cols = waarde[0];
-    rows = waarde[1];
+    setCols(waarde[0]);
+    setRows(waarde[1]);
   }
 
   if (overObject(xPos, rowHeight + rowMargin * rowTitleButtonPos[3][0], width / 2, buttonSize)) {
-    setGameState(PLAY_GAME);
+    if (gameOptionsAreSet()) {
+      setGameState(PLAY_GAME);
+    } else {
+      return;
+    }
   }
+}
+
+
+boolean gameOptionsAreSet() {
+  return bananaSelected != -1 && gridSelected != -1;
 }

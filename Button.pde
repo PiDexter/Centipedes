@@ -21,6 +21,7 @@ void drawButtonText(String text, float x, float y, float textSize) {
   text(text, x, y);
 }
 
+
 void drawButtonText(String text, float x, float y, int textColor) {  
   float textSize = (height * 3.3) / 100;
   fill(textColor);
@@ -43,6 +44,7 @@ boolean overButton(int[] options, float x, float y, float buttonSize) {
   return false;
 }
 
+
 // Overloading for 2D array
 boolean overButton(int[][] options, float x, float y, float buttonSize) {
   for (int i = 0; i < options.length; i++) {
@@ -58,15 +60,18 @@ boolean overObject(float x, float y, float buttonSize) {
   return mouseX >= x && mouseX < x + buttonSize && mouseY >= y && mouseY < y + buttonSize;
 }
 
+
 // Overloading for custom height parameter
 boolean overObject(float x, float y, float buttonSize, float height) {
   return mouseX >= x && mouseX < x + buttonSize && mouseY >= y && mouseY < y + height;
 }
 
 
+
 float calculateButtonsCenterX(int totalButtons, float squareWidth) {
   return (width - (totalButtons * squareWidth)) / 2;
 }
+
 
 float yCenterText(float y, float squareHeight) {
   return y + squareHeight / 2 - 10;

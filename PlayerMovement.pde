@@ -15,55 +15,52 @@ void updatePosition(int x, int y) {
 
 
 void move(int x, int y) {
-  
-  if (!isInBounds(x, y) || isTail(x, y) || visitedCell(x, y)) {
+  if (checkCollision(x , y)) {
     return;
   } else {
     updatePlayer(x, y);
   }
 }
 
+
+boolean checkCollision(int x, int y) {
+  return !isInBounds(x, y) || isTail(x, y) || cellValueIs(VISITED_CELL, x, y);
+}
+
+
 boolean isInBounds(int x, int y) {
   return (x >= 0 && x < grid.length) && (y >= 0 && y < grid[x].length);
 }
 
-boolean visitedCell(int x, int y) {
-  return grid[x][y] == VISITED_CELL;
-}
 
+boolean canMoveTo(String text) {
 
-boolean canMoveRight() {
-  
-  int x = getHeadX() + 1;
-  int y = getHeadY();
-    
-  return isInBounds(x, y) && !isTail(x, y) && !visitedCell(x, y);
-}
-
-boolean canMoveLeft() {
-  
-  int x = getHeadX() - 1;
-  int y = getHeadY();
-    
-  return isInBounds(x, y) && !isTail(x, y) && !visitedCell(x, y);
-}
-
-boolean canMoveUp() {
-  
   int x = getHeadX();
-  int y = getHeadY() - 1;
-    
-  return isInBounds(x, y) && !isTail(x, y) && !visitedCell(x, y);
-}
+  int y = getHeadY();
 
-boolean canMoveDown() {
+  switch (text) {
+
+  case "RIGHT":
+    x += 1;
+    break;
+
+  case "LEFT":
+    x -= 1;
+    break;
+
+  case "UP":
+    y -= 1;
+    break;
+
+  case "DOWN":
+    y += 1;
+    break;
+  }
   
-  int x = getHeadX();
-  int y = getHeadY() + 1;
-    
-  return isInBounds(x, y) && !isTail(x, y) && !visitedCell(x, y);
+  return isInBounds(x, y) && !isTail(x, y) && !cellValueIs(VISITED_CELL, x, y);
 }
 
-boolean canMove() {
-  return canMoveRight() || canMoveLeft() || canMoveUp() || canMoveDown();
+
+boolean hasNextMoves() {
+  return canMoveTo("RIGHT") || canMoveTo("LEFT") || canMoveTo("UP") || canMoveTo("DOWN");
 }
