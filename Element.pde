@@ -27,8 +27,12 @@ void drawElements() {
   case BANANA:
     drawCellShape(banana);
     break;
-  }
   
+  case CHAMELEON:
+    drawCellShape(chameleon);
+    break;
+  }
+   
 }
 
 

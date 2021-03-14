@@ -10,6 +10,7 @@ PShape arrowRight;
 
 PShape cherry;
 PShape banana;
+PShape chameleon;
 
 /*
 * IMAGES
@@ -37,8 +38,10 @@ void createShapes() {
   playButton = loadShape("assets/shapes/playbutton.svg");
   arrowLeft = loadShape("assets/shapes/arrow-left.svg");
   arrowRight = loadShape("assets/shapes/arrow-right.svg");
+  
   cherry = loadShape("assets/shapes/cherry.svg");
   banana = loadShape("assets/shapes/banana.svg");
+  chameleon = loadShape("assets/shapes/chameleon.svg");
 
   
 }
@@ -59,4 +62,5 @@ void createFonts() {
 * <a href="https://www.freepik.com/vectors/frame">Frame vector created by upklyak - www.freepik.com</a>
 * <a href="https://www.freepik.com/vectors/cartoon">Cartoon vector created by brgfx - www.freepik.com</a>
 * <a href="https://www.freepik.com/vectors/background">Background vector created by brgfx - www.freepik.com</a>
+* <a href="https://www.freepik.com/vectors/character">Character vector created by brgfx - www.freepik.com</a>
 */
