@@ -58,5 +58,5 @@ int totalChameleons() {
    numberOfChameleons = 10; 
   }
 
-  return (int) Math.ceil(numberOfChameleons);
+  return numberOfChameleons;
 }
