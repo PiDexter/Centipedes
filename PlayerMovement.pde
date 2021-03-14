@@ -15,11 +15,15 @@ void updatePosition(int x, int y) {
 
 
 void move(int x, int y) {
-  if (!isInBounds(x, y) || isTail(x, y) || visitedCell(x, y)) {
+  if (checkCollision(x , y)) {
     return;
   } else {
     updatePlayer(x, y);
   }
+}
+
+boolean checkCollision(int x, int y) {
+  return !isInBounds(x, y) || isTail(x, y) || visitedCell(x, y);
 }
 
 boolean isInBounds(int x, int y) {
