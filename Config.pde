@@ -43,7 +43,7 @@ void loadConfig() {
 
 
 void initTextSizes() {
-  largeText = (height * 5) / 100;
-  mediumText = (height * 3) / 100;
+  largeText = height * 5 / 100;
+  mediumText = height * 3 / 100;
   tinyText = height * 1 / 100;
 }
