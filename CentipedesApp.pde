@@ -28,7 +28,7 @@ void keyPressed() {
     break;
 
   case GAME_END:
-    gameOverControls();
+    gameEndControls();
     break;
   }
   

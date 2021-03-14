@@ -32,7 +32,7 @@ void restart() {
 /*
 *  KEYBOARD CONTROLS
 */
-void gameOverControls() {
+void gameEndControls() {
   if (key == 'r' || key == 'R') {
     restart();
   }
