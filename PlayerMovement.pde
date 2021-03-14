@@ -15,7 +15,6 @@ void updatePosition(int x, int y) {
 
 
 void move(int x, int y) {
-  
   if (!isInBounds(x, y) || isTail(x, y) || visitedCell(x, y)) {
     return;
   } else {
