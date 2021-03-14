@@ -8,8 +8,6 @@ PShape playButton;
 PShape arrowLeft;
 PShape arrowRight;
 
-PShape scoreBackground;
-
 PShape cherry;
 PShape banana;
 
