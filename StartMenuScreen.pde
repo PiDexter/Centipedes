@@ -31,7 +31,8 @@ void initMenu() {
 
 
 void menu() {
-  //background(0);// Resets the previous graphics
+  bg.resize(width, height);
+  background(bg);// Resets the previous graphics
   if (menuInitialized == false) {
 
     initMenu();  

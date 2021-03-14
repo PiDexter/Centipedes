@@ -1,5 +1,6 @@
 void play() {
-  background(0);
+  bg.resize(width, height);
+  background(bgMenu);
 
   if (!gameInitialized) {
     
