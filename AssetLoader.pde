@@ -34,7 +34,6 @@ void createShapes() {
   cherry = loadShape("assets/shapes/cherry.svg");
   banana = loadShape("assets/shapes/banana.svg");
   
-  scoreBackground = loadShape("assets/shapes/scoreBackground.svg");
 }
 
 void createFonts() {

@@ -6,9 +6,6 @@ void initScore() {
 
 void drawScore() {
   int margin = 45;
-  
-  //shapeMode(CORNER);
-  shape(scoreBackground, margin, margin);
 
   fill(#FFFFFF);
   textSize(mediumText);
