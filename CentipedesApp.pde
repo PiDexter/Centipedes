@@ -1,11 +1,14 @@
 void setup() {
   //size(1920, 1080);
   fullScreen();
-  surface.setResizable(true);
-  surface.setTitle("Centipede by Christiaan Wiggers");
-  loadAssets();
   
+  loadAssets();
   loadConfig();
+  
+  surface.setResizable(true);
+  surface.setTitle("Centipedes by Christiaan Wiggers");
+  
+  cursor(cursorImg);
 }
 
 
@@ -25,7 +28,7 @@ void keyPressed() {
     break;
 
   case GAME_END:
-    gameOverControls();
+    gameEndControls();
     break;
   }
   

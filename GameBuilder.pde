@@ -30,7 +30,7 @@ void drawGame() {
       if (debugMode) {
         fill(51);
         textAlign(CENTER, CENTER);
-        textSize(12);
+        textSize(tinyText);
         text(x + "," + y, xCoordinateCell(x) + cellSize() / 2, yCoordinateCell(y) + cellSize() / 2);
       }
     }
