@@ -44,7 +44,7 @@ void createShapes() {
 }
 
 void createImages() {
-  bgMenu = loadImage("assets/shapes/bg.jpg");
+  bgMenu = loadImage("assets/images/bg.jpg");
   bgPlay = loadImage("assets/images/bgPlay.jpg");
 }
 
