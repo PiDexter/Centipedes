@@ -14,7 +14,7 @@ void drawFullWidthButton(String buttonText, float x, float y, float buttonSize) 
 * TEXT ON BUTTON
  */
 void drawButtonText(String text, float x, float y, float textSize) {
-  fill(#ffffff);
+  fill(WHITE);
   textFont(squirk, textSize);
   textLeading(45);
   textAlign(CENTER, CENTER);
@@ -23,10 +23,9 @@ void drawButtonText(String text, float x, float y, float textSize) {
 
 
 void drawButtonText(String text, float x, float y, int textColor) {  
-  float textSize = (height * 3.3) / 100;
   fill(textColor);
   textLeading(45);
-  textFont(squirk, textSize);
+  textFont(squirk, mediumText);
   textAlign(CENTER, CENTER);
   text(text, x, y);
 }

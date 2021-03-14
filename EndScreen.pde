@@ -1,20 +1,20 @@
-void gameOver() {
-  setGameState(GAME_OVER);
+void gameEnd() {
+  setGameState(GAME_END);
 }
 
 
 void endScreen() {
   background(51);
-  fill(#ffffff);
+  fill(WHITE);
   textSize(largeText);
   textAlign(CENTER, CENTER);
-  text("GAME OVER" + "\n" + "Score: " + getPlayerScore(), width / 2, height /2);
+  text("GAME OVER" + "\n" + "Score: " + getPlayerScore(), width / 2, height / 2.5);
   drawOptions();
 }
 
 
 void drawOptions() {
-  fill(#ffffff);
+  fill(WHITE);
   textSize(largeText);
   textAlign(CENTER, CENTER);
   text("Play again? Press \"R\"", width / 2, height / 1.5);

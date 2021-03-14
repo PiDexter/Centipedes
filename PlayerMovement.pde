@@ -20,6 +20,10 @@ void move(int x, int y) {
   } else {
     updatePlayer(x, y);
   }
+  
+  if (noMoreFruitLeft() || !hasNextMoves()) {
+    gameEnd();
+  }
 }
 
 
@@ -30,6 +34,11 @@ boolean checkCollision(int x, int y) {
 
 boolean isInBounds(int x, int y) {
   return (x >= 0 && x < grid.length) && (y >= 0 && y < grid[x].length);
+}
+
+
+boolean noMoreFruitLeft() {
+  return totalCherries == 0 && totalBananas == 0;
 }
 
 

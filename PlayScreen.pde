@@ -1,6 +1,6 @@
 void play() {
-  background(0);
-
+  bgPlay.resize(width, height);
+  background(bgPlay);
   if (!gameInitialized) {
     
     initGame();  

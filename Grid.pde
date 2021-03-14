@@ -1,5 +1,5 @@
-int cols = 16;
-int rows = 8;
+int cols;
+int rows;
 
 int[][] grid;
 

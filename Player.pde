@@ -75,13 +75,6 @@ void updatePlayer(int x, int y) {
   updatePosition(x, y);
   handleGameElements(x, y);
 
-  if (noMoreFruitLeft()) {
-    gameOver();
-  }
-
-  if (!hasNextMoves()) {
-    gameOver();
-  }
 }
 
 
@@ -91,13 +84,8 @@ void removeTailElement() {
   if (playerElements - 1 > 0) {
     playerElements -= 1;
   } else {
-    gameOver();
+    gameEnd();
   }
-}
-
-
-boolean noMoreFruitLeft() {
-  return totalCherries == 0 && totalBananas == 0;
 }
 
 

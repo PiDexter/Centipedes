@@ -1,6 +1,6 @@
 boolean gameInitialized = false;
 
-int totalBananas; // Default 20 bananas in a game
+int totalBananas;
 int totalCherries;
 
 
@@ -58,5 +58,5 @@ int totalChameleons() {
    numberOfChameleons = 10; 
   }
 
-  return (int) Math.ceil(numberOfChameleons);
+  return numberOfChameleons;
 }

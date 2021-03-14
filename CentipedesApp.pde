@@ -24,7 +24,7 @@ void keyPressed() {
     gamePlayControls();
     break;
 
-  case GAME_OVER:
+  case GAME_END:
     gameOverControls();
     break;
   }
@@ -44,7 +44,7 @@ void mousePressed() {
   case PLAY_GAME:
     break;
 
-  case GAME_OVER:
+  case GAME_END:
     break;
   }
 

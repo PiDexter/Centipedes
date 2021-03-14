@@ -31,7 +31,8 @@ void initMenu() {
 
 
 void menu() {
-  //background(0);// Resets the previous graphics
+  bgMenu.resize(width, height);
+  background(bgMenu);
   if (menuInitialized == false) {
 
     initMenu();  
@@ -65,7 +66,7 @@ void drawMenu() {
 
 void drawRowTitle(String text, float y) {
   float textSize = (height * 5) / 100;
-  fill(#ffffff);
+  fill(WHITE);
   textSize(textSize);
   textFont(squirk, textSize);
   textLeading(45);
