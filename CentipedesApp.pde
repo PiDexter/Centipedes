@@ -6,7 +6,7 @@ void setup() {
   loadConfig();
   
   surface.setResizable(true);
-  surface.setTitle("Centipede by Christiaan Wiggers");
+  surface.setTitle("Centipedes by Christiaan Wiggers");
   
   cursor(cursorImg);
 }
