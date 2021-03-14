@@ -65,7 +65,7 @@ void drawMenu() {
 
 void drawRowTitle(String text, float y) {
   float textSize = (height * 5) / 100;
-  fill(#ffffff);
+  fill(WHITE);
   textSize(textSize);
   textFont(squirk, textSize);
   textLeading(45);

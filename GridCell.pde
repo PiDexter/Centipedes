@@ -22,7 +22,7 @@ void drawCellShape(PShape type) {
 
 int cellColor(int x, int y) {
 
-  int cellColor = #FFFFFF;
+  int cellColor = WHITE;
 
   if (debugMode) {
     if (grid[x][y] == BANANA) {
