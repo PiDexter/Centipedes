@@ -8,7 +8,7 @@ void endScreen() {
   fill(WHITE);
   textSize(largeText);
   textAlign(CENTER, CENTER);
-  text("GAME OVER" + "\n" + "Score: " + getPlayerScore(), width / 2, height /2);
+  text("GAME OVER" + "\n" + "Score: " + getPlayerScore(), width / 2, height / 2.5);
   drawOptions();
 }
 
