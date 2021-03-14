@@ -11,14 +11,17 @@ final int SETTINGS = 4;
 int gameState = START_MENU;
 boolean debugMode = false;
 
+
 int getGameState() {
   return gameState;
 }
+
 
 void setGameState(int state) {
   gameState = state;
   clear();
 }
+
 
 void drawGameState() {
   switch(gameState) {

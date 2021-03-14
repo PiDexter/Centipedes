@@ -2,6 +2,7 @@ void gameOver() {
   setGameState(GAME_OVER);
 }
 
+
 void endScreen() {
   background(51);
   fill(#ffffff);
@@ -11,12 +12,14 @@ void endScreen() {
   drawOptions();
 }
 
+
 void drawOptions() {
   fill(#ffffff);
   textSize(largeText);
   textAlign(CENTER, CENTER);
   text("Play again? Press \"R\"", width / 2, height / 1.5);
 }
+
 
 void restart() {
   setGameState(START_MENU);

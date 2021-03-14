@@ -56,7 +56,7 @@ boolean canMoveTo(String text) {
     y += 1;
     break;
   }
-
+  
   return isInBounds(x, y) && !isTail(x, y) && !cellValueIs(VISITED_CELL, x, y);
 }
 

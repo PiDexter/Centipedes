@@ -7,7 +7,6 @@ void drawPlayerMode(float y, float buttonSize) {
 }
 
 
-
 /*
 *  BANANA OPTIONS
 */
@@ -33,6 +32,7 @@ void drawBananaOptions(int[][] options, float y, float buttonSize) {
   }
 }
 
+
 int[] getBananaValue(int[][] options, float x, float y, float buttonWidth) {
   for (int i = 0; i < options.length; i++) {
     
@@ -45,7 +45,6 @@ int[] getBananaValue(int[][] options, float x, float y, float buttonWidth) {
   
   return options[0];
 }
-
 
 
 /*
@@ -73,6 +72,7 @@ void drawGridOptions(int[][] options, float y, float buttonSize) {
   }
 }
 
+
 int[] getGridValue(int[][] options, float x, float y, float buttonSize) {
   
   for (int i = 0; i < options.length; i++) {
@@ -85,5 +85,4 @@ int[] getGridValue(int[][] options, float x, float y, float buttonSize) {
   }
   
   return options[0];
-  
 }

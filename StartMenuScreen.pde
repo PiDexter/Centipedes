@@ -11,11 +11,11 @@ float[][] rowTitleButtonPos = {
   {2.7}, // Play button
 };
 
-
 int bananaSelected;
 int gridSelected;
 
 boolean menuInitialized = false;
+
 
 void initMenu() {
   buttonSize = (width / 2) / MAX_BUTTONS_ROW;
@@ -28,6 +28,7 @@ void initMenu() {
   bananaSelected = -1;
   gridSelected = -1;
 }
+
 
 void menu() {
   //background(0);// Resets the previous graphics
@@ -42,6 +43,7 @@ void menu() {
     noLoop();
   }
 }
+
 
 void drawMenu() {
 
@@ -95,6 +97,7 @@ void startMenuMouseControl() {
     }
   }
 }
+
 
 boolean gameOptionsAreSet() {
   return bananaSelected != -1 && gridSelected != -1;

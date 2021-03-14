@@ -16,7 +16,6 @@ void setRandomElement(int total, int element) {
 }
 
 
-
 void drawElements() {
 
   switch (grid[getHeadX()][getHeadY()]) {
@@ -31,7 +30,6 @@ void drawElements() {
   }
   
 }
-
 
 
 void handleGameElements(int x, int y) {
@@ -52,7 +50,6 @@ void handleGameElements(int x, int y) {
     break;
   }
 }
-
 
 
 int elementCount(int cellType) {

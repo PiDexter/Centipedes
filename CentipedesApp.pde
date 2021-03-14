@@ -8,9 +8,11 @@ void setup() {
   loadConfig();
 }
 
+
 void draw() {
   drawGameState();
 }
+
 
 void keyPressed() {
   switch (gameState) {
@@ -29,6 +31,7 @@ void keyPressed() {
   
   loop();
 }
+
 
 void mousePressed() {
   

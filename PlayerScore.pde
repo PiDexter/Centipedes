@@ -1,8 +1,10 @@
 int playerScore;
 
+
 void initScore() {
   playerScore = 0;
 }
+
 
 void drawScore() {
   int margin = 45;
@@ -17,6 +19,7 @@ void drawScore() {
 int getPlayerScore() {
   return playerScore;
 }
+
 
 void increaseScore(int points) {
   this.playerScore += points;
