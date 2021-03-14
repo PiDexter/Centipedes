@@ -1,5 +1,5 @@
-void gameOver() {
-  setGameState(GAME_OVER);
+void gameEnd() {
+  setGameState(GAME_END);
 }
 
 

@@ -20,6 +20,10 @@ void move(int x, int y) {
   } else {
     updatePlayer(x, y);
   }
+  
+  if (noMoreFruitLeft() || !hasNextMoves()) {
+    gameEnd();
+  }
 }
 
 

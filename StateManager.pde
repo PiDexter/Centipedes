@@ -4,7 +4,7 @@
 final int START_MENU = 0;
 final int PLAY_GAME = 1;
 final int PAUSE_GAME = 2;
-final int GAME_OVER = 3;
+final int GAME_END = 3;
 final int SETTINGS = 4;
 
 // Default game state
@@ -38,7 +38,7 @@ void drawGameState() {
     //pauseGame();
     break;
 
-  case GAME_OVER:
+  case GAME_END:
     endScreen();
     break;
     
