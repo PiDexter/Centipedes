@@ -75,13 +75,10 @@ void updatePlayer(int x, int y) {
   updatePosition(x, y);
   handleGameElements(x, y);
 
-  if (noMoreFruitLeft()) {
+  if (noMoreFruitLeft() || !hasNextMoves()) {
     gameOver();
   }
 
-  if (!hasNextMoves()) {
-    gameOver();
-  }
 }
 
 
