@@ -17,6 +17,7 @@ PShape chameleon;
 */
 PImage bgMenu;
 PImage bgPlay;
+PImage cursorImg;
 
 /*
 * FONTS
@@ -49,6 +50,7 @@ void createShapes() {
 void createImages() {
   bgMenu = loadImage("assets/images/bg.jpg");
   bgPlay = loadImage("assets/images/bgPlay.jpg");
+  cursorImg = loadImage("assets/images/cursor.png");
 }
 
 
