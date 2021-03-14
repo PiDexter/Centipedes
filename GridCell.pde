@@ -59,7 +59,7 @@ float yCoordinateCell(int y) {
 }
 
 
-boolean cellValue(int value, int x, int y) {
+boolean cellValueIs(int value, int x, int y) {
   return grid[x][y] == value;
 }
 

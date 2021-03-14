@@ -22,9 +22,11 @@ void move(int x, int y) {
   }
 }
 
+
 boolean checkCollision(int x, int y) {
-  return !isInBounds(x, y) || isTail(x, y) || cellValue(VISITED_CELL, x, y);
+  return !isInBounds(x, y) || isTail(x, y) || cellValueIs(VISITED_CELL, x, y);
 }
+
 
 boolean isInBounds(int x, int y) {
   return (x >= 0 && x < grid.length) && (y >= 0 && y < grid[x].length);
@@ -55,8 +57,9 @@ boolean canMoveTo(String text) {
     break;
   }
 
-  return isInBounds(x, y) && !isTail(x, y) && !cellValue(VISITED_CELL, x, y);
+  return isInBounds(x, y) && !isTail(x, y) && !cellValueIs(VISITED_CELL, x, y);
 }
+
 
 boolean hasNextMoves() {
   return canMoveTo("RIGHT") || canMoveTo("LEFT") || canMoveTo("UP") || canMoveTo("DOWN");
