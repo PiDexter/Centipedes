@@ -37,6 +37,11 @@ boolean isInBounds(int x, int y) {
 }
 
 
+boolean noMoreFruitLeft() {
+  return totalCherries == 0 && totalBananas == 0;
+}
+
+
 boolean canMoveTo(String text) {
 
   int x = getHeadX();

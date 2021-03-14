@@ -89,11 +89,6 @@ void removeTailElement() {
 }
 
 
-boolean noMoreFruitLeft() {
-  return totalCherries == 0 && totalBananas == 0;
-}
-
-
 boolean playerOnFruit(int x, int y) {
   return isHead(x, y) && 
          getCellValue(x, y) == CHERRY || 
