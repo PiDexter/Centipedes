@@ -80,7 +80,7 @@ void updatePlayer(int x, int y) {
     gameOver();
   }
 
-  if (!canMove()) {
+  if (!hasNextMoves()) {
     gameOver();
   }
 }

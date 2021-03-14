@@ -31,38 +31,33 @@ boolean visitedCell(int x, int y) {
 }
 
 
-boolean canMoveRight() {
-  
-  int x = getHeadX() + 1;
-  int y = getHeadY();
-    
-  return isInBounds(x, y) && !isTail(x, y) && !visitedCell(x, y);
-}
+boolean canMoveTo(String text) {
 
-boolean canMoveLeft() {
-  
-  int x = getHeadX() - 1;
-  int y = getHeadY();
-    
-  return isInBounds(x, y) && !isTail(x, y) && !visitedCell(x, y);
-}
-
-boolean canMoveUp() {
-  
   int x = getHeadX();
-  int y = getHeadY() - 1;
-    
+  int y = getHeadY();
+
+  switch (text) {
+
+  case "RIGHT":
+    x += 1;
+    break;
+
+  case "LEFT":
+    x -= 1;
+    break;
+
+  case "UP":
+    y -= 1;
+    break;
+
+  case "DOWN":
+    y += 1;
+    break;
+  }
+
   return isInBounds(x, y) && !isTail(x, y) && !visitedCell(x, y);
 }
 
-boolean canMoveDown() {
-  
-  int x = getHeadX();
-  int y = getHeadY() + 1;
-    
-  return isInBounds(x, y) && !isTail(x, y) && !visitedCell(x, y);
-}
-
-boolean canMove() {
-  return canMoveRight() || canMoveLeft() || canMoveUp() || canMoveDown();
+boolean hasNextMoves() {
+  return canMoveTo("RIGHT") || canMoveTo("LEFT") || canMoveTo("UP") || canMoveTo("DOWN");
 }
