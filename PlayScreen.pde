@@ -30,7 +30,7 @@ void gamePlayControls() {
   }
 
   // DEBUG MODE
-  if (keyCode==TAB) {
+  if (keyCode == TAB) {
     debugMode = !debugMode;
   }
 }
