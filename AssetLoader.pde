@@ -18,6 +18,7 @@ PShape chameleon;
 PImage bgMenu;
 PImage bgPlay;
 PImage cursorImg;
+PImage[] chameleonBite = new PImage[16];
 
 /*
 * FONTS
@@ -29,6 +30,7 @@ void loadAssets() {
   createShapes();
   createImages();
   createFonts();
+  loadChameleonAnimation();
 }
 
 
@@ -51,6 +53,13 @@ void createImages() {
   bgMenu = loadImage("assets/images/bg.jpg");
   bgPlay = loadImage("assets/images/bgPlay.jpg");
   cursorImg = loadImage("assets/images/cursor.png");
+}
+
+
+void loadChameleonAnimation() {
+ for (int i = 0; i < chameleonBite.length; i++) {
+   chameleonBite[i] = loadImage("assets/gif/" + i + ".png");
+ }
 }
 
 
