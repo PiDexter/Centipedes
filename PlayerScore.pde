@@ -7,12 +7,12 @@ void initScore() {
 
 
 void drawScore() {
-  int margin = 45;
+  int margin = 75;
 
   fill(WHITE);
   textSize(mediumText);
   textAlign(CORNER, LEFT);
-  text("Player 1" + "\n" + "Score: " + playerScore, margin * 2, margin * 3);
+  text("Player 1" + "\n" + "Score: " + playerScore, margin, margin);
 }
 
 

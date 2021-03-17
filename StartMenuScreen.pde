@@ -61,7 +61,7 @@ void drawMenu() {
   drawGridOptions(gridOptions, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize);
 
   // Row 4
-  drawFullWidthButton("PLAY GAME", xPos, rowHeight + rowMargin * rowTitleButtonPos[3][0], buttonSize);
+  drawPlayButton("PLAY GAME", xPos, rowHeight + rowMargin * rowTitleButtonPos[3][0], buttonSize);
 }
 
 void drawRowTitle(String text, float y) {
