@@ -1,16 +1,4 @@
 /*
-* Full width button
- */
-void drawFullWidthButton(String buttonText, float x, float y, float buttonSize) {
-  int buttonFullWidth = width / 2;
-  float textSize = buttonSize / 2;
-
-  shape(playButton, x, y, buttonFullWidth, buttonSize);
-  drawButtonText(buttonText, buttonFullWidth, yCenterText(y, buttonSize), textSize);
-}
-
-
-/*
 * TEXT ON BUTTON
  */
 void drawButtonText(String text, float x, float y, float textSize) {
