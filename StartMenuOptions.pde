@@ -91,7 +91,7 @@ int[] getGridValue(int[][] options, float x, float y, float buttonSize) {
 /*
 * PLAY BUTTON
  */
-void drawFullWidthButton(String buttonText, float x, float y, float buttonSize) {
+void drawPlayButton(String buttonText, float x, float y, float buttonSize) {
   int buttonFullWidth = width / 2;
   float textSize = buttonSize / 2;
 
