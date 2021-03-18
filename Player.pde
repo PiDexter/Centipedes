@@ -72,7 +72,7 @@ void removeTailElement() {
   grid[getLastTailPositionX()][getLastTailPositionY()] = VISITED_CELL;
 
   if (playerElements - 1 > 0) {
-    setGameState(ANIMATION);
+    runAnimation(chameleonBite);
     playerElements -= 1;
   } else {
     gameEnd();
