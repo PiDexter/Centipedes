@@ -2,7 +2,6 @@
 final int EMPTY_CELL = 0;
 final int VISITED_CELL = -1;
 final int PLAYER_ONE = 1;
-final int PLAYER_TWO = 2;
 final int CHERRY = 5;
 final int BANANA = 6;
 final int CHAMELEON = 7;
@@ -52,6 +51,16 @@ int getCellValue(int x, int y) {
 
 void setCellValue(int x, int y, int value) {
   grid[x][y] = value;
+}
+
+
+float xGridMargin() {
+  return (width - (cols * cellSize())) / 2;
+}
+
+
+float yGridMargin() {
+  return (height - (rows * cellSize())) / 2;
 }
 
 

@@ -5,9 +5,8 @@ float rowMargin, rowHeight, titleMargin;
 float xPos, yPos;
 
 float[][] rowTitleButtonPos = {
-  {-0.1, -0.5}, // Player options
-  {0.4}, // Banana options
-  {1.7}, // Grid options
+  {0.0}, // Banana options
+  {1.5}, // Grid options
   {2.7}, // Play button
 };
 
@@ -49,19 +48,15 @@ void menu() {
 void drawMenu() {
 
   // Row 1
-  drawRowTitle("PLAYER MODE", rowHeight + rowMargin * rowTitleButtonPos[0][0] - titleMargin);
-  drawPlayerMode(rowHeight + rowMargin * rowTitleButtonPos[0][1], buttonSize / 1.5);
+  drawRowTitle("BANANA DIFFICULTY", rowHeight + rowMargin * rowTitleButtonPos[0][0] - titleMargin);
+  drawBananaOptions(bananaOptions, rowHeight + rowMargin * rowTitleButtonPos[0][0], buttonSize);
 
   // Row 2
-  drawRowTitle("BANANA DIFFICULTY", rowHeight + rowMargin * rowTitleButtonPos[1][0] - titleMargin);
-  drawBananaOptions(bananaOptions, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize);
+  drawRowTitle("BOARD SIZE", rowHeight + rowMargin * rowTitleButtonPos[1][0] - titleMargin);
+  drawGridOptions(gridOptions, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize);
 
   // Row 3
-  drawRowTitle("BOARD SIZE", rowHeight + rowMargin * rowTitleButtonPos[2][0] - titleMargin);
-  drawGridOptions(gridOptions, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize);
-
-  // Row 4
-  drawPlayButton("PLAY GAME", xPos, rowHeight + rowMargin * rowTitleButtonPos[3][0], buttonSize);
+  drawPlayButton("PLAY GAME", xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize);
 }
 
 void drawRowTitle(String text, float y) {
@@ -79,18 +74,18 @@ void drawRowTitle(String text, float y) {
 * MOUSE CONTROLS
  */
 void startMenuMouseControl() {
-  if (overButton(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize)) {
-    int[] waarde = getBananaValue(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize);
+  if (overButton(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[0][0], buttonSize)) {
+    int[] waarde = getBananaValue(bananaOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[0][0], buttonSize);
     setBananas(waarde[0]);
   }
 
-  if (overButton(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize)) {  
-    int[] waarde = getGridValue(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], buttonSize);
+  if (overButton(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize)) {  
+    int[] waarde = getGridValue(gridOptions, xPos, rowHeight + rowMargin * rowTitleButtonPos[1][0], buttonSize);
     setCols(waarde[0]);
     setRows(waarde[1]);
   }
 
-  if (overObject(xPos, rowHeight + rowMargin * rowTitleButtonPos[3][0], width / 2, buttonSize)) {
+  if (overObject(xPos, rowHeight + rowMargin * rowTitleButtonPos[2][0], width / 2, buttonSize)) {
     if (gameOptionsAreSet()) {
       setGameState(PLAY_GAME);
     } else {

@@ -1,16 +1,13 @@
 void play() {
   bgPlay.resize(width, height);
   background(bgPlay);
+  
   if (!gameInitialized) {
-    
     initGame();  
-    
   } else {
-    
     drawScore();
     drawGame();
     noLoop();
-    
   }
 }
 

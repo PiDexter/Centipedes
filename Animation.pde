@@ -1,12 +1,13 @@
-final int deltaTime = 100; // Time between each frame in miliseconds
+final int DELTA_TIME = 50;    // Time between each frame in milliseconds
 
-int previousDisplayTime = 0;  // Last time in miliseconds frame animation displayed
-int countFrames = 0; // Keep track of image number displayed
+int previousDisplayTime = 0;   // Last time in milliseconds frame animation displayed
+int countFrames = 0;           // Keep track of image number displayed
 
-PImage[] animation; // Holds the array of animated images to display
+PImage[] animation;            // Holds the array of animated images to display
+
 
 void animation() {
-  if (millis() > previousDisplayTime + deltaTime) {
+  if (millis() > previousDisplayTime + DELTA_TIME) {
     countFrames++;
 
     if (countFrames == chameleonBite.length) { 
@@ -14,8 +15,6 @@ void animation() {
     }
 
     previousDisplayTime = millis();
-
-    background(DARK_GRAY);
     drawAnimation(animation);
   }
 }
@@ -30,11 +29,10 @@ void endAnimation() {
 void drawAnimation(PImage[] animation) {
   int xPos = width / 2;
   int yPos = height / 2;
-  int imgWidth = animation[countFrames].width * 2;
-  int imgHeight = animation[countFrames].height * 2;
   
+  background(DARK_GRAY);
   imageMode(CENTER);
-  image(animation[countFrames], xPos, yPos, imgWidth, imgHeight);
+  image(animation[countFrames], xPos, yPos);
 }
 
 
