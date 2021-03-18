@@ -2,7 +2,6 @@
 final int EMPTY_CELL = 0;
 final int VISITED_CELL = -1;
 final int PLAYER_ONE = 1;
-final int PLAYER_TWO = 2;
 final int CHERRY = 5;
 final int BANANA = 6;
 final int CHAMELEON = 7;
