@@ -1,6 +1,6 @@
-final int deltaTime = 100; // Time between each frame in miliseconds
+final int deltaTime = 100; // Time between each frame in milliseconds
 
-int previousDisplayTime = 0;  // Last time in miliseconds frame animation displayed
+int previousDisplayTime = 0;  // Last time in milliseconds frame animation displayed
 int countFrames = 0; // Keep track of image number displayed
 
 PImage[] animation; // Holds the array of animated images to display
