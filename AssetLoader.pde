@@ -15,7 +15,7 @@ PShape chameleon;
 PImage bgMenu;
 PImage bgPlay;
 PImage cursorImg;
-PImage[] chameleonBite = new PImage[16];
+PImage[] chameleonBite = new PImage[23];
 
 /*
 * CUSTOM FONTS
