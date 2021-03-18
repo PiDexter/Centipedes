@@ -28,8 +28,13 @@ void endAnimation() {
 
 
 void drawAnimation(PImage[] animation) {
+  int xPos = width / 2;
+  int yPos = height / 2;
+  int imgWidth = animation[countFrames].width * 2;
+  int imgHeight = animation[countFrames].height * 2;
+  
   imageMode(CENTER);
-  image(animation[countFrames], width / 2, height / 2);
+  image(animation[countFrames], xPos, yPos, imgWidth, imgHeight);
 }
 
 
