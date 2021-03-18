@@ -1,9 +1,10 @@
-final int DELTA_TIME = 100; // Time between each frame in milliseconds
+final int DELTA_TIME = 100;    // Time between each frame in milliseconds
 
-int previousDisplayTime = 0;  // Last time in milliseconds frame animation displayed
-int countFrames = 0; // Keep track of image number displayed
+int previousDisplayTime = 0;   // Last time in milliseconds frame animation displayed
+int countFrames = 0;           // Keep track of image number displayed
 
-PImage[] animation; // Holds the array of animated images to display
+PImage[] animation;            // Holds the array of animated images to display
+
 
 void animation() {
   if (millis() > previousDisplayTime + DELTA_TIME) {
@@ -14,8 +15,6 @@ void animation() {
     }
 
     previousDisplayTime = millis();
-
-    background(DARK_GRAY);
     drawAnimation(animation);
   }
 }
@@ -33,6 +32,7 @@ void drawAnimation(PImage[] animation) {
   int imgWidth = animation[countFrames].width * 2;
   int imgHeight = animation[countFrames].height * 2;
   
+  background(DARK_GRAY);
   imageMode(CENTER);
   image(animation[countFrames], xPos, yPos, imgWidth, imgHeight);
 }

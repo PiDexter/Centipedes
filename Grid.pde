@@ -45,13 +45,3 @@ void setRows(int rows) {
 void setCols(int cols) {
   this.cols = cols;
 }
-
-
-float xGridMargin() {
-  return (width - (cols * cellSize())) / 2;
-}
-
-
-float yGridMargin() {
-  return (height - (rows * cellSize())) / 2;
-}

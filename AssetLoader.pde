@@ -3,10 +3,7 @@
  */
 PShape selectButton;
 PShape buttonSelected;
-PShape background;
 PShape playButton;
-PShape arrowLeft;
-PShape arrowRight;
 
 PShape cherry;
 PShape banana;
@@ -37,10 +34,7 @@ void loadAssets() {
 void createShapes() {
   selectButton = loadShape("assets/shapes/button.svg");
   buttonSelected = loadShape("assets/shapes/buttonSelected.svg");
-  background = loadShape("assets/shapes/background.svg");
   playButton = loadShape("assets/shapes/playbutton.svg");
-  arrowLeft = loadShape("assets/shapes/arrow-left.svg");
-  arrowRight = loadShape("assets/shapes/arrow-right.svg");
   
   cherry = loadShape("assets/shapes/cherry.svg");
   banana = loadShape("assets/shapes/banana.svg");

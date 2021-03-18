@@ -1,13 +1,4 @@
 /*
-*  PLAYER MODE
-*/
-void drawPlayerMode(float y, float buttonSize) {
-  shape(arrowLeft, width / 2 + buttonSize, y, buttonSize, buttonSize);
-  shape(arrowRight, width / 2 + buttonSize * 2.8, y, buttonSize, buttonSize);
-}
-
-
-/*
 *  BANANA OPTIONS
 */
 void drawBananaOptions(int[][] options, float y, float buttonSize) {

@@ -55,6 +55,16 @@ void setCellValue(int x, int y, int value) {
 }
 
 
+float xGridMargin() {
+  return (width - (cols * cellSize())) / 2;
+}
+
+
+float yGridMargin() {
+  return (height - (rows * cellSize())) / 2;
+}
+
+
 float xCoordinateCell(int x) {
   return xGridMargin() + cellSize() * x;
 }
