@@ -58,7 +58,7 @@ void createImages() {
 
 void loadChameleonAnimation() {
  for (int i = 0; i < chameleonBite.length; i++) {
-   chameleonBite[i] = loadImage("assets/gif/" + i + ".png");
+   chameleonBite[i] = loadImage("assets/images/chameleonAnimation/" + i + ".png");
  }
 }
 
