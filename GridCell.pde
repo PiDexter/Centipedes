@@ -10,7 +10,8 @@ final int CHAMELEON = 7;
 final float CELLSIZE = 2.5; // Percentage of total screen width
 
 
-void drawGridCell(int x, int y) {
+void drawGridCell(int x, int y, int cellColor) {
+  fill(cellColor);
   rect(xGridMargin() + (cellSize() * x), yGridMargin() + (y * cellSize()), cellSize(), cellSize());
 }
 
