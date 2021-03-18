@@ -49,7 +49,6 @@ int totalCherries() {
 
 
 int totalChameleons() {
-
   int totalEmptyCells = elementCount(EMPTY_CELL) - playerElements;
   int numberOfChameleons = totalEmptyCells * 10 / 100;
   

@@ -2,7 +2,6 @@ int playerElements;
 int[][] playerPosition;
 
 
-
 void initPlayer() {
   initScore();
   playerElements = 10;
@@ -10,7 +9,6 @@ void initPlayer() {
 
   createStartPosition();
 }
-
 
 
 void createStartPosition() {
@@ -31,25 +29,18 @@ void createStartPosition() {
 
 
 void drawPlayer(int x, int y) {
-  
-  for (int i = 0; i < playerPosition.length; i++) {
-    
+  for (int i = 0; i < playerPosition.length; i++) { 
     if (isHead(x, y)) {
-      fill(DARK_GRAY);
-      drawGridCell(x, y);
+      drawGridCell(x, y, DARK_GRAY);
       break;
-      
     } else if (isTail(x, y)) {
-      fill(GREEN);
-      drawGridCell(x, y);
+      drawGridCell(x, y, GREEN);
       setCellValue(x, y, PLAYER_ONE);
       break;
-      
     } else if (getCellValue(x, y) == VISITED_CELL) { // Fill cell with grey color when last elements leave 
-      fill(LIGHT_GRAY);
-      drawGridCell(x, y);
+      drawGridCell(x, y, LIGHT_GRAY);
       break;
-    } 
+    }
   }
 }
 
@@ -74,14 +65,14 @@ void updatePlayer(int x, int y) {
 
   updatePosition(x, y);
   handleGameElements(x, y);
-
 }
 
 
 void removeTailElement() {
-  grid[getLastTailPositionX()][getLastTailPositionY()] = -1;
+  grid[getLastTailPositionX()][getLastTailPositionY()] = VISITED_CELL;
 
   if (playerElements - 1 > 0) {
+    runAnimation(chameleonBite);
     playerElements -= 1;
   } else {
     gameEnd();
@@ -91,8 +82,8 @@ void removeTailElement() {
 
 boolean playerOnFruit(int x, int y) {
   return isHead(x, y) && 
-         getCellValue(x, y) == CHERRY || 
-         getCellValue(x, y) == BANANA;
+    getCellValue(x, y) == CHERRY || 
+    getCellValue(x, y) == BANANA;
 }
 
 

@@ -1,14 +1,16 @@
 void setup() {
-  //size(1920, 1080);
-  fullScreen();
-  
+  size(1920, 1080);
+  //fullScreen();
+
   loadAssets();
   loadConfig();
-  
+
   surface.setResizable(true);
   surface.setTitle("Centipedes by Christiaan Wiggers");
-  
+
   cursor(cursorImg);
+
+  
 }
 
 
@@ -31,13 +33,13 @@ void keyPressed() {
     gameEndControls();
     break;
   }
-  
+
   loop();
 }
 
 
 void mousePressed() {
-  
+
   switch (gameState) {
 
   case START_MENU:

@@ -3,7 +3,7 @@
 */
 final int START_MENU = 0;
 final int PLAY_GAME = 1;
-final int PAUSE_GAME = 2;
+final int ANIMATION = 2;
 final int GAME_END = 3;
 final int SETTINGS = 4;
 
@@ -34,8 +34,8 @@ void drawGameState() {
     play();
     break;
 
-  case PAUSE_GAME:
-    //pauseGame();
+  case ANIMATION:
+    animation();
     break;
 
   case GAME_END:

@@ -17,7 +17,6 @@ void setRandomElement(int total, int element) {
 
 
 void drawElements() {
-
   switch (grid[getHeadX()][getHeadY()]) {
 
   case CHERRY:
@@ -32,12 +31,11 @@ void drawElements() {
     drawCellShape(chameleon);
     break;
   }
-   
 }
 
-
+// Element logic when player head is on element
 void handleGameElements(int x, int y) {
-  switch (grid[x][y]) { // grid cell value
+  switch (grid[x][y]) {
 
   case CHAMELEON:
     removeTailElement();

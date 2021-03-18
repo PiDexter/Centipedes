@@ -23,8 +23,7 @@ int[][] createEmptyGrid(int cols, int rows) {
 
 
 void drawEmptyGrid(int x, int y) { 
-  fill(cellColor(x, y));
-  drawGridCell(x, y);
+  drawGridCell(x, y, cellColor(x, y));
 }
 
 
