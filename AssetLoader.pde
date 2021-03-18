@@ -18,9 +18,9 @@ PImage cursorImg;
 PImage[] chameleonBite = new PImage[16];
 
 /*
-* FONTS
+* CUSTOM FONTS
  */
-PFont squirk; // custom font
+PFont squirk;
 
 
 void loadAssets() {
