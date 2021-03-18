@@ -1,18 +1,32 @@
-int count = 0;
-boolean showAnimation = false;
+final int deltaTime = 100; // Time between each frame in miliseconds
 
-void drawAnimation() {
-  background(DARK_GRAY);
-  count++;
-  if (count == chameleonBite.length) {
-    endAnimation();
-  } else {
-    image(chameleonBite[count], xCoordinateCell(getHeadX()), yCoordinateCell(getHeadY()));
+int previousDisplayTime = 0;  // Last time in miliseconds frame animation displayed
+int countFrames = 0; // Keep track of image number displayed
+
+
+void animation() {
+  if (millis() > previousDisplayTime + deltaTime) {
+    countFrames++;
+
+    if (countFrames == chameleonBite.length) { 
+      endAnimation();
+    }
+
+    previousDisplayTime = millis();
+
+    background(DARK_GRAY);
+    
+    drawImageAnimation(chameleonBite);
   }
 }
 
+
 void endAnimation() {
-  showAnimation = false;
-  count = 0;
+  countFrames = 0;
   setGameState(PLAY_GAME);
+}
+
+void drawImageAnimation(PImage[] animation) {
+  imageMode(CENTER);
+  image(animation[countFrames], width / 2, height / 2);
 }

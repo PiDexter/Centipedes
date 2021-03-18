@@ -35,8 +35,7 @@ void drawGameState() {
     break;
 
   case ANIMATION:
-    showAnimation = true;
-    drawAnimation();
+    animation();
     break;
 
   case GAME_END:
