@@ -72,6 +72,7 @@ void removeTailElement() {
   grid[getLastTailPositionX()][getLastTailPositionY()] = VISITED_CELL;
 
   if (playerElements - 1 > 0) {
+    setGameState(ANIMATION);
     playerElements -= 1;
   } else {
     gameEnd();
