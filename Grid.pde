@@ -32,13 +32,13 @@ int getRows() {
 }
 
 
-int getCols() {
-  return cols;
+void setRows(int rows) {
+  this.rows = rows;
 }
 
 
-void setRows(int rows) {
-  this.rows = rows;
+int getCols() {
+  return cols;
 }
 
 

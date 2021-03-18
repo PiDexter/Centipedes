@@ -62,7 +62,6 @@ boolean isTail(int x, int y) {
 
 
 void updatePlayer(int x, int y) {
-
   updatePosition(x, y);
   handleGameElements(x, y);
 }
